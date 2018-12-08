@@ -1,0 +1,41 @@
+{% extends 'tik/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/discussion_detail.css' %}">
+{% endblock %}
+
+<!-- Main Body -->
+{% block body-block %}
+
+<div class="container">
+  <div class="area">
+  <section class="arg-area">
+      <h2>{{ discussion.title }}</h2>
+    <p class='argument'>{{ discussion.argument }}</p>
+    <p> <strong> Posted By: {{ discussion.author }}</strong> </p>
+  </section>
+
+  <br>
+  <hr>
+  <div class="comment-section">
+    <h4>Comments</h4>
+        {% for comment in comments %}
+        <div>
+            <p class="user-id">{{ comment.username }}</p>
+            <p class="user-comment">{{ comment.comment_text }}</p>
+        </div>
+        {% endfor %}
+  </div>
+
+  {% if request.user.is_authenticated %}
+  <form class="formclass" action="{{ discussion.get_absolute_url }}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-dark"> Post </button>
+  </form>
+  {% endif %}
+  </div>
+</div>
+<br>
+{% endblock %}

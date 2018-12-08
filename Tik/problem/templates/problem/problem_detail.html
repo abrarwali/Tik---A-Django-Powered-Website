@@ -1,0 +1,26 @@
+{% extends "problem/base_problem.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/problem_detail.css' %}">
+{% endblock %}
+
+{% block body-block %}
+<div class=" highlightCon container">
+<br>
+<div class="area">
+<h2>{{problem.title}}</h2>
+<h5>{{problem.difficulty}}</h5>
+<p>{{problem.description}}</p>
+{% if request.user.is_authenticated %}
+<form  action= "{{ problem.get_absolute_url }}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+{% endif %}
+
+</div>
+<br>
+</div>
+{% endblock %}

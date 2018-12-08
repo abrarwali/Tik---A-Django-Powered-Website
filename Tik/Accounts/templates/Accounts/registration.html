@@ -1,0 +1,18 @@
+{% extends "Accounts/account_base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block body-block %}
+<div class="container">
+<h3>Register Here </h3>
+
+<form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <button type="submit" class="btn btn-outline-dark"> Register </button>
+</form>
+</div>
+{% endblock %}

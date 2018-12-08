@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Vollkorn');
+@import url('https://fonts.googleapis.com/css?family=Cardo:400,700');
+
+h4{
+  font-family: Vollkorn;
+}
+a.AddButton {
+  border-style: solid;
+  border-width : 1px 1px 1px 1px;
+  text-decoration : none;
+  padding : 4px;
+  border-color : #38a9b5;
+  background-color: #38a9b5;
+  color: white;
+  border-radius: 4px;
+  margin-left: 350px;
+  width: fit-content;
+}
+/* CSS for table heading */
+.heading{
+  font-family: Vollkorn;
+  background-color: #38A9B5;
+  color: white;
+  border-radius: 15px;
+  border-collapse: separate;
+
+}
+#btn-area{
+  display: flex;
+  justify-content: center;
+}
+.table-main{
+  display: flex;
+  justify-content: center;
+}
+th.problem{
+  width: 350px;
+  text-align: center;
+  height: 30px;
+  color: white;
+
+}
+th.difficulty {
+  width: 150px;
+  text-align: center;
+  color: white;
+}
+/* td.a{
+    color: #859F92;
+} */
+tr{
+  text-align: center;
+  height: 30px;
+  font-weight: bold;
+
+}
+
+tr:nth-child(even){
+  background: #38A9B5;
+
+
+}
+a {
+    color: #69313b;
+    text-decoration: none;
+}
+.table-main a:hover
+{
+     color:#021F15   ;
+     text-decoration:underline;
+     cursor:pointer;
+}
+/* td.problem{
+  font-weight: 400;
+    color: #859F92;
+} */
+td {
+  color:#69313b;
+}
+td.a{
+  padding: 1em 1em;
+}

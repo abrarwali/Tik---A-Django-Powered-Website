@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url('https://fonts.googleapis.com/css?family=Unlock');
+     body {
+        font-family: Raleway, sans-serif;
+        background-color: rgba(231,238,239,.9)
+    }
+    
+    html{
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    header{
+background-color: #38A9B5;
+        padding: 1.5em 1em;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    section a {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .header-top{
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        align-items:center;
+        color: white;
+
+    }
+    header a{
+        color: white;
+        padding-left: 5px ;
+        padding-right: 5px;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .footer-bottom {
+       display: flex;
+       justify-content: space-between;
+       color: white;
+       height:inherit;
+    }
+
+    footer {
+    background-color: #077E98;
+        height: 50px;
+        width: 100%;
+        padding: 1.5em 1em;
+      }
+
+    footer a {
+        color: white;
+        padding: 0px;
+    }
+    footer p {
+        margin: 0px;
+    }
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0
+}
+
+.Site-content {
+  flex: 1 auto;
+}

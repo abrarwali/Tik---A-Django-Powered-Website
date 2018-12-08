@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+h4 {
+  color: slategrey;
+
+}
+.area{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+hr {
+       display: block;
+       position: relative;
+       padding: 0;
+       height: 0;
+       max-height: 0;
+       font-size: 1px;
+       line-height: 0;
+       clear: both;
+       border: none;
+       border-top: 1px solid #aaaaaa; */
+    }
+.user-comment {
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #1c1e1f;
+}
+p.user-id {
+    color: dodgerblue;
+    font-size: large;
+    text-decoration: none;
+}
+
+
+h3 {
+  font-family: 'Noto Serif', serif;
+}
+p.argument{
+
+}
+#id_comment_text{
+  width : 450px;
+  height: 80px;
+
+}
+label {
+  display: inline-block;
+  width: 140px;
+}​
+.comment-section{
+  text-align: 10em;
+}
+p.comment-section {
+  margin-left: 100px;
+}

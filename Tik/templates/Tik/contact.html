@@ -1,0 +1,18 @@
+{% extends 'tik/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "css/contact.css" %}">
+{% endblock %}
+{% block body-block %}
+<div class="container">
+  <h2>Contact Us</h2>
+
+<form  action="{% url 'contact' %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-dark">Send</button>
+
+</form>
+</div>
+{% endblock %}

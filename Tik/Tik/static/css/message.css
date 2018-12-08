@@ -1,0 +1,16 @@
+p.message-class {
+    background: #38A9B5;
+    width: 15%;
+    padding: 0.5em  10.5em;
+    border-radius: 8px;
+    color: #0e0f0f;
+    font-weight: bolder;
+}
+
+ul.alert {
+    margin: 0px;
+    display: flex;
+    justify-content: center
+
+
+}

@@ -1,0 +1,27 @@
+#id_first_name{
+  width: 250px;
+  height: 20px;
+
+color: inherit;
+}
+#id_last_name{
+  width: 250px;
+  height: 20px;
+}
+#id_email{
+  width: 250px;
+  height: 20px;
+}
+#id_bio{
+  width: 250;
+  height: 50px;
+}
+#id_profile_pic{
+  width: 250px;
+  height: 20px;
+  padding: 1em 1em;
+}
+label {
+  display: inline-block;
+  width: 140px;
+}

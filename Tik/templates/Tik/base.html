@@ -1,0 +1,65 @@
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>index</title>
+        <link rel="stylesheet" href="{% static "css/base.css" %}">
+        <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+        <link rel="stylesheet" href="{% static "css/hover-min.css" %}">
+        <link rel="stylesheet" href="{% static "css/message.css" %}">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body class="Site">
+        <!-- Header -->
+        <header>
+        <div class="container">
+            <div class="header-top">
+                <h1><a href=""></a> tik</h1>
+
+
+                <nav>
+                    <a class="hvr-bob" href=" {% url 'home' %}">Home</a>
+                    <a class="hvr-bob" href="{% url 'problem_list' %}">Problems</a>
+                    <a class="hvr-bob" href="{% url 'discussion' %}">Discussion</a>
+                    <a class="hvr-bob" href="{% url 'about' %}">About</a>
+               </nav>
+               <section>
+                    {% if user.is_authenticated %}
+                      <a class="hvr-glow" href="{{ user.get_absolute_url }}">{{ request.user.username }} </a>
+                      <a class="hvr-glow" href="{% url 'logout' %}">Sign Out</a>
+                    {% else %}
+                      <a class="hvr-glow" href="{% url 'register' %}">  Register</a>
+                      <a class="hvr-glow"href="{% url 'login' %}">Sign In</a>
+                    {% endif %}
+                    </section>
+                </div>
+            </div>
+    </header>
+    <!-- Main  Body  -->
+    <main class="Site-content">
+      {% include "Tik/message.html" %}
+    {% block body-block %}
+
+    {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                        <p>&copy 2018 - Tik</p>
+                        <a class="hvr-icon-grow-rotate" href="{% url 'contact' %}" > Contact Us  <i class="fas fa-phone hvr-icon"></i></a>
+                </div>
+            </div>
+          </footer>
+<script type="text/javascript" src="static/js/message.js"></script>
+    </body>
+    </html>

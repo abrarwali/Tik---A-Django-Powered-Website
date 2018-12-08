@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+h2 {
+  font-family: Ubuntu;
+}
+p{
+  font-size: 20px;;
+}
+.highlightCon{
+
+  border-radius: 7px;
+}

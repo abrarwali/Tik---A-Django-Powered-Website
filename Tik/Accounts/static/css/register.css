@@ -1,0 +1,39 @@
+#id_first_name{
+  width: 250px;
+  height: 20px;
+
+color: inherit;
+}
+#id_last_name{
+  width: 250px;
+  height: 20px;
+}
+#id_email{
+  width: 250px;
+  height: 20px;
+}
+#id_username{
+  width: 250px;
+  height: 20px;
+  /* border-radius: 3px; */
+}
+#id_password{
+  width: 250px;
+  height: 20px;
+/* border-radius: 3px; */
+}
+
+#id_confirm_password{
+  width: 250px;
+  height: 20px;
+/* border-radius: 3px; */
+}
+
+
+label {
+  display: inline-block;
+  width: 140px;
+}​
+.btn{
+  background-color: dodgerblue;
+}

@@ -1,0 +1,33 @@
+{% extends 'tik/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+{% endblock %}
+
+{% block body-block %}
+<br>
+<div class="container">
+  <div>
+    <h2 class="welcome ">WELCOME TO TIK</h2>
+    <h4 class="welcome django ">A Django Powered Website</h4>
+
+
+</div>
+<div id="heroes">
+<h3> Wall of Heroes </h3>
+<section class="images">
+<!-- include -->
+<figure><img src= "{% static 'newton.jpg' %}" alt="Issac Newton" width="260" height="300"> <figcaption>Issac Newton</figcaption> </figure>
+<figure> <img src="{% static 'ada.jpg' %}" alt="ada" width="260" height="300"><figcaption>Ada Lovelace</figcaption></figure>
+<figure><img src= "{% static 'feynman.jpg' %}" alt="Richard Feynman"width="260" height="300"><figcaption>Richard Feynman</figcaption></figure>
+<figure> <img src="{% static 'turing.jpg' %}" alt="Alan Turing" width="260" height="300"><figcaption>Alan Turing</figcaption></figure>
+<figure> <img src="{% static 'musk.jpg' %}" alt="Elon Musk" width="260" height="300"><figcaption>Elon Musk</figcaption></figure>
+<figure> <img src="{% static 'G_V_Rossum.jpg' %}" alt="G_V_Rossum" width="260" height="300"><figcaption>Guido Van Rossum</figcaption></figure>
+
+</section>
+</div>
+</div>
+
+
+{% endblock %}
